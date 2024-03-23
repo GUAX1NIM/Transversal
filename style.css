@@ -1,0 +1,464 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  height: 10vh;
+  background-color: #000;
+}
+
+/* inicio do navbar */
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  padding: 60px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 999;
+  background-color: transparent;
+}
+
+header.rolagem {
+  background-color: #000000;
+  padding: 10px 4%;
+}
+
+header.rolagem a,
+header.rolagem i {
+  color: #23bb49;
+}
+
+header i {
+  font-size: 30px;
+  color: #fff;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 0 20px; /* Reduzindo a margem para telas menores */
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+/* fim do navbar */
+@media screen and (max-width: 768px) {
+  header ul li {
+    display: block;
+  }
+
+  header ul li a {
+    display: block;
+    padding: 10px;
+  }
+}
+
+/* inicio do banner e do tema do site */
+.banner {
+  height: 100vh;
+  background-image: url(img/prefeitura-promove-semana-do-meio-ambiente-discutindo-reciclagem-e-biodiversidade.jpg);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  font-size: 4em;
+}
+
+.banner h2 {
+  color: #23bb49;
+  font-size: 4em;
+}
+
+h1 {
+  color: #fff;
+}
+
+p {
+  color: #fff;
+}
+
+.tema h1 {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.subtitulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.subtitulo h2 {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+/* fim do tema do banner */
+
+/*inicio do tanho da fonto e imagem redondas   */
+.int-0 {
+  font-size: 50px;
+}
+.int-1 {
+  font-size: 26px;
+}
+img {
+  border-radius: 25px;
+}
+/*fim do tanho da fonto e imagem redondas  */
+
+/*seção de pontos de reciclagem */
+#pontos {
+  background-color: #000000;
+}
+
+/* cartões de pontos de reciclagem */
+.card {
+  border: 10px solid #000000;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px #23bb49;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-text {
+  color: #ffffff;
+}
+
+.text-center mb-4 {
+  color: #ffffff;
+}
+
+/* reciclavel */
+.rec {
+  border: 2px solid #23bb49;
+}
+
+/* inicio da logo */
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff37;
+  text-transform: uppercase;
+  position: relative;
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo {
+  animation: fade 1s ease-in-out forwards;
+}
+
+/* inicio do butão */
+.button-container {
+  text-align: center;
+  margin-top: 50px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* ou outro método de alinhamento que preferir */
+}
+.button-container li {
+  margin-right: 10px; /* Ajuste conforme necessário */
+}
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: transparent;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button:hover::before {
+  transform: scaleY(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(35, 187, 73) 10.8%,
+    rgba(35, 187, 73) 94.3%
+  );
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button:hover .button-content {
+  color: #23bb49;
+}
+
+.button:active {
+  scale: 0.9;
+}
+/* Final do butão */
+
+/* link */
+a {
+  color: #fff;
+}
+.so {
+  text-align: center;
+}
+.ref {
+  text-align: center;
+}
+
+.banner {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Estilo do container do menu hambúrguer */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Estilo dos links do menu */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Estilo do ícone do menu hambúrguer */
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .button-container button {
+    display: block;
+    margin: 5px auto;
+  }
+  .rec {
+    border: 2px solid #23bb49;
+    width: 100%; 
+  }
+  header {
+    width: 100%;
+    padding: 0px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    z-index: 999;
+    background-color: transparent;
+  }
+  
+  header ul li {
+    margin: 0 10px; /* Reduzindo ainda mais a margem para telas menores */
+  }
+  .banner {
+    width: 100%;
+    height: 30vh;
+    background-image: url(img/prefeitura-promove-semana-do-meio-ambiente-discutindo-reciclagem-e-biodiversidade.jpg);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tema h1 {
+    font-size: 18px;
+    justify-content: center;
+  }
+
+  .subtitulo h2 {
+    font-size: 18px;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  .int-0 {
+    font-size: 35px;
+  }
+  .int-1 {
+    font-size: 16px;
+  }
+}
+.container {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: right;
+  align-items:center;
+
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.menu-icon {
+  cursor: pointer;
+  display: none; /* Inicialmente oculto em telas maiores */
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Mostra o ícone do menu em telas menores que 768px */
+    color: #ffffff;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: block;
+  }
+  .card{
+    justify-content: center;
+  }
+  html {
+    height:  50vh;
+    background-color: #000;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    border: 5px solid #000000; /* Reduz a largura da borda para telas menores */
+  }
+
+  .card-title {
+    font-size: 18px; /* Reduz o tamanho da fonte do título */
+  }
+
+  .card-text {
+    font-size: 14px; /* Reduz o tamanho da fonte do texto */
+  }
+
+  .subtitulo {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .button-container {
+    flex-wrap: wrap;
+  }
+  
+  .button-container li {
+    margin-right: 0;
+    margin-bottom: 10px; /* Espaçamento entre os botões */
+  }
+}
